@@ -9,7 +9,7 @@ function App() {
   const [title,setTitle] = useState("")
   const [editId,setEditId] = useState(null);
   const [theme,setTheme] = useState("light");
-  //pattern 3
+  //3
   useEffect(()=>{
       localStorage.setItem("tasks",JSON.stringify(tasks))
   },[tasks])
