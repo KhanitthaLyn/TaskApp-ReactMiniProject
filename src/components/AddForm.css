@@ -19,7 +19,7 @@ h2{
     outline: none;
 }
 .submit-btn{
-    background: green;
+    background: rgb(0, 0, 0);
     color: white;
     font-weight: bold;
     cursor: pointer;

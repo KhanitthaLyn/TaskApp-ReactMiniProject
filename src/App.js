@@ -9,7 +9,7 @@ function App() {
   const [title,setTitle] = useState("")
   const [editId,setEditId] = useState(null);
   const [theme,setTheme] = useState("light");
-  //รูปแบบ 3
+  //pattern 3
   useEffect(()=>{
       localStorage.setItem("tasks",JSON.stringify(tasks))
   },[tasks])
@@ -27,11 +27,10 @@ function App() {
   function saveTask(e){
       e.preventDefault();
       if(!title){
-          alert("กรุณาป้อนข้อมูลด้วยครับ")
+          alert("Plase Fill form")
       }else if(editId){
-        //อัพเดตข้อมูล
+        //Update data
         const updateTask = tasks.map((item)=>{
-          //รายการใดมีรหัสตรงกับรหัสแก้ไข
             if(item.id === editId){
                 return {...item,title:title}
             }
@@ -41,7 +40,7 @@ function App() {
         setEditId(null)
         setTitle("")
       }else{
-        //เพิ่มรายการใหม่
+        //Add new task
         const newTask={
             id:Math.floor(Math.random()*1000),
             title:title

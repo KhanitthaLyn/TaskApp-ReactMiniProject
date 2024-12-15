@@ -16,7 +16,7 @@ export default function Header(props){
                 <span>Task Management</span>
             </div>
             <div className="theme-container">
-                <span>{theme === "light" ? "โหมดกลางวัน" : "โหมดกลางคืน"}</span>
+                <span>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
                 <span className="icon" onClick={ToggleTheme}>
                     {theme==="light"? <BsSunFill/> : <BsMoonStarsFill/>}
                 </span>
